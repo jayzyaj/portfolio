@@ -2,14 +2,30 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { colors } from './constants/themes/colors';
+import Lottie from 'react-lottie';
+import earth from './assets/animations/hello-earth.json';
+
+const defaultOptions = {
+  loop: false,
+  autoplay: true, 
+  animationData: earth,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <Lottie options={defaultOptions}
+          style={{ backgroundColor: 'transparent' }}
+          height={400}
+          width={400}
+        />
         <p style={{ color: colors.primary }}>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Hi! I'm John Clifford de Vera
         </p>
         <a
           className="App-link"
@@ -18,11 +34,11 @@ function App() {
           rel="noopener noreferrer"
           style={{ color: colors.tertiary }}
         >
-          Learn React
+          Linkedin Profile
         </a>
       </header>
     </div>
   );
 }
 
-export default App;
+export { App };
