@@ -29,7 +29,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.linkedin.com/in/john-clifford-de-vera-511150159/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: colors.tertiary }}
