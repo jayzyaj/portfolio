@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Menu, Layout } from 'antd';
-import { HomeOutlined } from '@ant-design/icons';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 
 import {
   BrowserRouter as Router,
@@ -10,39 +8,34 @@ import {
   Link
 } from "react-router-dom";
 import { Home } from './pages/Home';
+// import { colors } from './constants/themes/colors';
 
 const { Content, Header } = Layout;
 
 const navStyle = {
-  nav: {
-    
+  menu: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 };
 
 function App() {
   const [current, setCurrent] = useState('home');
 
-  const handleClick = (e: any) => {
-    setCurrent(e.key);
-  };
+  const handleClick = (e: any) => setCurrent(e.key);
 
   return (
     <Router>
       <Layout>
-        <Header className="siteLayoutBackground" style={{padding: 0, background: ""}}>
-            <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+        <Header className="siteLayoutBackground" style={{padding: 0}}>
+            <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+              {/* <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
+                <Link style={{ color: colors.primary }} to="/">Home</Link> */}
               <Menu.Item key="home">
                 <Link to="/">Home</Link>
               </Menu.Item>
             </Menu>
           </Header>
-        {/* <nav style={{ background: 'orange' }}>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </nav> */}
         <Content>
           <Switch>
             <Route path="/">
