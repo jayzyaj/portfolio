@@ -1,43 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { colors } from './constants/themes/colors';
-import Lottie from 'react-lottie';
-import earth from './assets/animations/hello-earth.json';
+import React, { useState } from 'react';
+import { Menu, Layout } from 'antd';
+import { HomeOutlined } from '@ant-design/icons';
+import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 
-const defaultOptions = {
-  loop: false,
-  autoplay: true, 
-  animationData: earth,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice'
-  }
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { Home } from './pages/Home';
+
+const { Content, Header } = Layout;
+
+const navStyle = {
+  nav: {
+    
+  },
 };
 
 function App() {
+  const [current, setCurrent] = useState('home');
+
+  const handleClick = (e: any) => {
+    setCurrent(e.key);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Lottie options={defaultOptions}
-          style={{ backgroundColor: 'transparent' }}
-          height={400}
-          width={400}
-        />
-        <p style={{ color: colors.primary }}>
-          Hi! I'm John Clifford de Vera
-        </p>
-        <a
-          className="App-link"
-          href="https://www.linkedin.com/in/john-clifford-de-vera-511150159/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: colors.tertiary }}
-        >
-          Linkedin Profile
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Header className="siteLayoutBackground" style={{padding: 0, background: ""}}>
+            <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+              <Menu.Item key="home">
+                <Link to="/">Home</Link>
+              </Menu.Item>
+            </Menu>
+          </Header>
+        {/* <nav style={{ background: 'orange' }}>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
+        </nav> */}
+        <Content>
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Content>
+      </Layout>
+    </Router>
   );
 }
 
