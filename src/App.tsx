@@ -5,8 +5,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom";
+  Link,
+} from 'react-router-dom';
 import { Home } from './pages/Home';
 // import { colors } from './constants/themes/colors';
 
@@ -27,15 +27,15 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Header className="siteLayoutBackground" style={{padding: 0}}>
-            <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-              {/* <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
+        <Header className="siteLayoutBackground" style={{ padding: 0 }}>
+          <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+            {/* <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
                 <Link style={{ color: colors.primary }} to="/">Home</Link> */}
-              <Menu.Item key="home">
-                <Link to="/">Home</Link>
-              </Menu.Item>
-            </Menu>
-          </Header>
+            <Menu.Item key="home">
+              <Link to="/">Home</Link>
+            </Menu.Item>
+          </Menu>
+        </Header>
         <Content>
           <Switch>
             <Route path="/">
