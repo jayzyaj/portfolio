@@ -8,6 +8,7 @@ import {
   Link,
 } from 'react-router-dom';
 import { Home } from './pages/Home';
+import { colors } from './constants/themes/colors';
 // import { colors } from './constants/themes/colors';
 
 const { Content, Header } = Layout;
@@ -15,7 +16,10 @@ const { Content, Header } = Layout;
 const navStyle = {
   menu: {
     display: 'flex',
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    backgroundColor: 'transparent',
+    paddingBottomWidth: 0,
+    borderBottomWidth: 'none !important',
   },
 };
 
@@ -26,13 +30,13 @@ function App() {
 
   return (
     <Router>
-      <Layout>
-        <Header className="siteLayoutBackground" style={{ padding: 0 }}>
+      {/* <Layout style={{ backgroundColor: '#FFFAFA' }}> */}
+        <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
           <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-            {/* <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
-                <Link style={{ color: colors.primary }} to="/">Home</Link> */}
-            <Menu.Item key="home">
-              <Link to="/">Home</Link>
+            <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
+              <Link style={{ color: colors.primary }} to="/">Home</Link>
+            {/* <Menu.Item key="home">
+              <Link to="/">Home</Link> */}
             </Menu.Item>
           </Menu>
         </Header>
@@ -43,7 +47,7 @@ function App() {
             </Route>
           </Switch>
         </Content>
-      </Layout>
+      {/* </Layout> */}
     </Router>
   );
 }

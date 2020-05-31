@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import Lottie from 'react-lottie';
 import { colors } from '../constants/themes/colors';
@@ -14,10 +14,21 @@ const defaultOptions = {
 };
 
 function Home() {
+  const [animationFinish, setAnimationDone] = useState<boolean>(false);
+  const handleAnimation = () => setAnimationDone(true);
+
+  let appLogoClass = '';
+  if (animationFinish) appLogoClass = 'App-logo';
   return (
     <div className="App">
-      <div className="App-logo">
+      <div className={appLogoClass}>
         <Lottie
+          eventListeners={[
+            {
+              eventName: 'complete',
+              callback: () => handleAnimation(),
+            },
+          ]}
           options={defaultOptions}
           style={{ backgroundColor: 'transparent' }}
           height={400}
