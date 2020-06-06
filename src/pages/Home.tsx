@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import '../App.css';
 import Lottie from 'react-lottie';
+import { AiOutlineLinkedin } from 'react-icons/ai';
 import { colors } from '../constants/themes/colors';
 import earth from '../assets/animations/hello-earth.json';
 
@@ -35,17 +37,20 @@ function Home() {
           width={400}
         />
       </div>
-      <p style={{ color: colors.primary, fontWeight: 'bolder', fontSize: 34 }}>
+      <p style={{
+        color: colors.primary, fontWeight: 800, fontFamily: 'Open Sans Bold', fontSize: 52,
+      }}
+      >
         Hi! I'm John Clifford de Vera
       </p>
       <a
-        className="App-link"
         href="https://www.linkedin.com/in/john-clifford-de-vera-511150159/"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: colors.tertiary }}
+        style={{ width: '10%', height: '10%' }}
+        // style={{ textDecoration: 'none' }}
       >
-        Linkedin Profile
+        <AiOutlineLinkedin width={400} height={400} />
       </a>
     </div>
   );

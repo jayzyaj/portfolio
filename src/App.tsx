@@ -31,22 +31,29 @@ function App() {
   return (
     <Router>
       {/* <Layout style={{ backgroundColor: '#FFFAFA' }}> */}
-        <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
-          <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-            <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
-              <Link style={{ color: colors.primary }} to="/">Home</Link>
-            {/* <Menu.Item key="home">
-              <Link to="/">Home</Link> */}
-            </Menu.Item>
-          </Menu>
-        </Header>
-        <Content>
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </Content>
+      <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
+        <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+          <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
+            <Link style={{ color: colors.primary }} to="/">Intro</Link>
+          </Menu.Item>
+          <Menu.Item key="works">
+            <Link to="/works">Works</Link>
+          </Menu.Item>
+          <Menu.Item key="about">
+            <Link to="/about">About</Link>
+          </Menu.Item>
+          <Menu.Item key="contact">
+            <Link to="/contact">Contact</Link>
+          </Menu.Item>
+        </Menu>
+      </Header>
+      <Content>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Content>
       {/* </Layout> */}
     </Router>
   );
