@@ -5,13 +5,13 @@ import './home.css';
 import Lottie from 'react-lottie';
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { FaQuora } from 'react-icons/fa';
-import { Typography } from 'antd';
-import { colors } from '../../constants/themes/colors';
+import { Layout, Typography } from 'antd';
+// import { colors } from '../../constants/themes/colors';
 import earth from '../../assets/animations/hello-earth.json';
 import { IconLink } from '../../components/Icon';
 
+const { Content } = Layout;
 const { Title } = Typography;
-
 
 const defaultOptions = {
   loop: false,
@@ -23,7 +23,7 @@ const defaultOptions = {
 };
 
 const homeTitle = {
-  color: colors.primary,
+  color: '#211F1F',
   fontWeight: 800,
   fontSize: 52,
   fontFamily: 'ArchivoBlack-Regular',
@@ -54,10 +54,11 @@ function Home() {
   const handleAnimation = () => setAnimationDone(true);
 
   let appLogoClass = '';
-  if (animationFinish) appLogoClass = 'App-logo';
+  if (animationFinish) appLogoClass = 'Home-logo';
   return (
-    <div className="App">
-      <div className={appLogoClass}>
+    <Content className="flex col-space-around">
+      {/* <div> */}
+      <div className={`flex home-logo ${appLogoClass}`}>
         <Lottie
           eventListeners={[
             {
@@ -71,13 +72,16 @@ function Home() {
           width={400}
         />
       </div>
-      <Title style={homeTitle}>
-        Hi! I'm John Clifford de Vera
-      </Title>
+      <div className="flex flex-center margin-vertical-34">
+        <Title style={homeTitle}>
+          Hi! I'm John Clifford de Vera
+        </Title>
+      </div>
       <div className="footer-wrapper">
         <Footer />
       </div>
-    </div>
+      {/* </div> */}
+    </Content>
   );
 }
 
