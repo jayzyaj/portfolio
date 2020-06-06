@@ -8,8 +8,6 @@ import {
   Link,
 } from 'react-router-dom';
 import { Home } from './pages/Home/Home';
-import { colors } from './constants/themes/colors';
-// import { colors } from './constants/themes/colors';
 
 const { Content, Header } = Layout;
 
@@ -34,22 +32,22 @@ function App() {
       <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
         <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
           <Menu.Item key="home">
-            <Link to="/">Intro</Link>
+            <Link to="/portfolio">Intro</Link>
           </Menu.Item>
           <Menu.Item key="works">
-            <Link to="/works">Works</Link>
+            <Link to="/portfolio/works">Works</Link>
           </Menu.Item>
           <Menu.Item key="about">
-            <Link to="/about">About</Link>
+            <Link to="/portfolio/about">About</Link>
           </Menu.Item>
           <Menu.Item key="contact">
-            <Link to="/contact">Contact</Link>
+            <Link to="/portfolio/contact">Contact</Link>
           </Menu.Item>
         </Menu>
       </Header>
       <Content>
         <Switch>
-          <Route path="/">
+          <Route path="/portfolio">
             <Home />
           </Route>
         </Switch>
