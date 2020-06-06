@@ -21,3 +21,20 @@
     transform: rotate(0deg);
   }
 }
+
+@font-face {
+  font-family: 'ArchivoBlack-Regular';
+  src: local('ArchivoBlack-Regular'), url(./assets/fonts/ArchivoBlack-Regular.ttf) format('opentype');
+}
+
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover, .ant-menu-horizontal > .ant-menu-item a:hover {
+  color: #77dd77 !important;
+}
+
+.ant-menu-horizontal > .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+  border-bottom-color: #77dd77 !important;
+}
+
+.ant-menu-item:hover {
+  border-bottom-color: transparent !important;
+}

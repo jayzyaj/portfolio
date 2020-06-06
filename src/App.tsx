@@ -7,7 +7,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import { Home } from './pages/Home';
+import { Home } from './pages/Home/Home';
 import { colors } from './constants/themes/colors';
 // import { colors } from './constants/themes/colors';
 
@@ -33,8 +33,8 @@ function App() {
       {/* <Layout style={{ backgroundColor: '#FFFAFA' }}> */}
       <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
         <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-          <Menu.Item style={{ borderBottomColor: colors.primary }} key="home">
-            <Link style={{ color: colors.primary }} to="/">Intro</Link>
+          <Menu.Item key="home">
+            <Link to="/">Intro</Link>
           </Menu.Item>
           <Menu.Item key="works">
             <Link to="/works">Works</Link>

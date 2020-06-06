@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
-import '../App.css';
+import '../../App.css';
 import Lottie from 'react-lottie';
 import { AiOutlineLinkedin } from 'react-icons/ai';
-import { colors } from '../constants/themes/colors';
-import earth from '../assets/animations/hello-earth.json';
+import { Typography } from 'antd';
+import { colors } from '../../constants/themes/colors';
+import earth from '../../assets/animations/hello-earth.json';
+
+const { Title } = Typography;
 
 const defaultOptions = {
   loop: false,
@@ -13,6 +16,13 @@ const defaultOptions = {
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
+};
+
+const homeTitle = {
+  color: colors.primary,
+  fontWeight: 800,
+  fontSize: 52,
+  fontFamily: 'ArchivoBlack-Regular',
 };
 
 function Home() {
@@ -37,20 +47,17 @@ function Home() {
           width={400}
         />
       </div>
-      <p style={{
-        color: colors.primary, fontWeight: 800, fontFamily: 'Open Sans Bold', fontSize: 52,
-      }}
-      >
+      <Title style={homeTitle}>
         Hi! I'm John Clifford de Vera
-      </p>
+      </Title>
       <a
         href="https://www.linkedin.com/in/john-clifford-de-vera-511150159/"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ width: '10%', height: '10%' }}
+        style={{ textDecoration: 'none' }}
         // style={{ textDecoration: 'none' }}
       >
-        <AiOutlineLinkedin width={400} height={400} />
+        <AiOutlineLinkedin style={{ fontSize: 40 }} />
       </a>
     </div>
   );
