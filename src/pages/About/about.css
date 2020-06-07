@@ -1,0 +1,28 @@
+.parentContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
+
+.image-profile {
+  pointer-events: none;
+  max-height: 40vh;
+  max-width: 40vh;
+}
+
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 60%; */
+}
+
+.caption {
+  text-align: left;
+  font-size: 24px;
+  font-family: 'OpenSans-Regular';
+  max-width: 60%;
+}

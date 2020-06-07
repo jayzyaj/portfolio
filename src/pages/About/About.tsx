@@ -1,32 +1,29 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React from 'react';
 import '../../App.css';
-import Lottie from 'react-lottie';
+import './about.css';
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { FaQuora } from 'react-icons/fa';
 import { Layout, Typography } from 'antd';
 // import { colors } from '../../constants/themes/colors';
-import earth from '../../assets/animations/hello-earth.json';
 import { LinkIcon } from '../../components/LinkIcon';
 
+const meImage = require('../../assets/images/me.JPG');
+
 const { Content } = Layout;
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
-const defaultOptions = {
-  loop: false,
-  autoplay: true,
-  animationData: earth,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const homeTitle = {
+const homeTitleStyle = {
   color: '#211F1F',
   fontWeight: 800,
-  fontSize: 52,
   fontFamily: 'ArchivoBlack-Regular',
   // height: 12,
+};
+
+const captionStyle = {
+  fontFamily: 'OpenSans-Regular',
+  fontSize: 24,
 };
 
 const Footer = () => (
@@ -52,16 +49,28 @@ const Footer = () => (
 function About() {
   return (
     <Content className="flex col-space-around">
-      <div className="flex home-logo">
+      <div className="flex home-logo mt-5">
+        {/* <img className="image-profile" src={meImage} alt="Profile" /> */}
       </div>
-      <div className="flex text-center flex-col margin-vertical-54">
-        <Title style={homeTitle}>
-          I'm John Clifford de Vera
+      <div className="flex flex-col text-wrapper">
+        <Title style={homeTitleStyle}>
+          About
         </Title>
-        <Title level={2}>Software Engineer</Title>
+        <Paragraph className="caption">
+          Hi.
+          My name is John Clifford de Vera and I'm a Frontend Engineer.
+          <br />
+          <br />
+          I work every day to create mobile native apps and client-side web apps.
+          <br />
+          I love working with the consumer-facing side of a product or application which inspires me to give
+          the best user experience and serve data or information easily and efficiently.
+          {/* Most of my work focuses on the
+          consumer side of the product and my job is to give the user the best user experience. */}
+        </Paragraph>
       </div>
       <div className="footer-wrapper">
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Content>
   );
