@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import '../../App.css';
-import './home.css';
 import Lottie from 'react-lottie';
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { FaQuora } from 'react-icons/fa';
@@ -22,17 +21,12 @@ const defaultOptions = {
   },
 };
 
-const title = {
+const homeTitle = {
   color: '#211F1F',
   fontWeight: 800,
   fontSize: 52,
   fontFamily: 'ArchivoBlack-Regular',
   // height: 12,
-};
-
-const subTitle = {
-  fontFamily: 'OpenSans-Regular',
-  marginTop: -20,
 };
 
 const Footer = () => (
@@ -55,33 +49,16 @@ const Footer = () => (
   </div>
 );
 
-function Home() {
-  const [animationFinish, setAnimationDone] = useState<boolean>(false);
-  const handleAnimation = () => setAnimationDone(true);
-
-  let appLogoClass = '';
-  if (animationFinish) appLogoClass = 'Home-logo';
+function About() {
   return (
     <Content className="flex col-space-around">
-      <div className={`flex home-logo ${appLogoClass}`}>
-        <Lottie
-          eventListeners={[
-            {
-              eventName: 'complete',
-              callback: () => handleAnimation(),
-            },
-          ]}
-          options={defaultOptions}
-          style={{ backgroundColor: 'transparent' }}
-          height={340}
-          width={340}
-        />
+      <div className="flex home-logo">
       </div>
       <div className="flex text-center flex-col margin-vertical-54">
-        <Title style={title}>
+        <Title style={homeTitle}>
           I'm John Clifford de Vera
         </Title>
-        <Title style={subTitle} level={2}>Software Engineer</Title>
+        <Title level={2}>Software Engineer</Title>
       </div>
       <div className="footer-wrapper">
         <Footer />
@@ -90,4 +67,4 @@ function Home() {
   );
 }
 
-export { Home };
+export { About };

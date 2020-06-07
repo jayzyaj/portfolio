@@ -3,6 +3,11 @@
   src: local('ArchivoBlack-Regular'), url(./assets/fonts/ArchivoBlack-Regular.ttf) format('opentype');
 }
 
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: local('OpenSans-Regular'), url(./assets/fonts/OpenSans-Regular.ttf) format('opentype');
+}
+
 .ant-menu-item-selected a, .ant-menu-item-selected a:hover, .ant-menu-horizontal > .ant-menu-item a:hover {
   color: #77dd77 !important;
 }

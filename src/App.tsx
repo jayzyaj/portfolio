@@ -8,11 +8,12 @@ import {
   Link,
 } from 'react-router-dom';
 import { Home } from './pages/Home/Home';
+import { About } from './pages/About/About';
 
 const { Content, Header } = Layout;
 
 const navStyle = {
-  menu: {
+  navWrapper: {
     display: 'flex',
     // justifyContent: 'center',
     backgroundColor: 'transparent',
@@ -21,6 +22,10 @@ const navStyle = {
   },
 };
 
+// const NavBar = () => (
+
+// );
+
 function App() {
   const [current, setCurrent] = useState('home');
 
@@ -28,17 +33,16 @@ function App() {
 
   return (
     <Router>
-      {/* <Layout style={{ backgroundColor: '#FFFAFA' }}> */}
       <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
-        <Menu style={navStyle.menu} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+        <Menu style={navStyle.navWrapper} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
           <Menu.Item key="home">
             <Link to="/portfolio">Intro</Link>
           </Menu.Item>
-          <Menu.Item key="works">
-            <Link to="/portfolio/works">Works</Link>
-          </Menu.Item>
           <Menu.Item key="about">
             <Link to="/portfolio/about">About</Link>
+          </Menu.Item>
+          <Menu.Item key="works">
+            <Link to="/portfolio/works">Works</Link>
           </Menu.Item>
           <Menu.Item key="contact">
             <Link to="/portfolio/contact">Contact</Link>
@@ -47,12 +51,14 @@ function App() {
       </Header>
       <Content>
         <Switch>
-          <Route path="/portfolio">
+          <Route exact path="/portfolio">
             <Home />
+          </Route>
+          <Route path="/portfolio/about">
+            <About />
           </Route>
         </Switch>
       </Content>
-      {/* </Layout> */}
     </Router>
   );
 }

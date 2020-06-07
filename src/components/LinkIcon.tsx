@@ -6,7 +6,7 @@ type Props = {
   color: string;
 };
 
-const IconLink = ({ IconProvider, link, color }: Props) => (
+const LinkIcon = ({ IconProvider, link, color }: Props) => (
   <a
     href={link}
     target="_blank"
@@ -18,4 +18,4 @@ const IconLink = ({ IconProvider, link, color }: Props) => (
   </a>
 );
 
-export { IconLink };
+export { LinkIcon };
