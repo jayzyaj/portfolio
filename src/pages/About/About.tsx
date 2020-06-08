@@ -3,13 +3,11 @@
 import React from 'react';
 import '../../App.css';
 import './about.css';
-import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
-import { FaQuora } from 'react-icons/fa';
 import { Layout, Typography } from 'antd';
 // import { colors } from '../../constants/themes/colors';
-import { LinkIcon } from '../../components/LinkIcon';
+import { colors } from '../../constants/themes/colors';
 
-const meImage = require('../../assets/images/me.JPG');
+// const meImage = require('../../assets/images/me.JPG');
 
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
@@ -20,31 +18,6 @@ const homeTitleStyle = {
   fontFamily: 'ArchivoBlack-Regular',
   // height: 12,
 };
-
-const captionStyle = {
-  fontFamily: 'OpenSans-Regular',
-  fontSize: 24,
-};
-
-const Footer = () => (
-  <div className="footer">
-    <LinkIcon
-      IconProvider={AiOutlineLinkedin}
-      link="https://www.linkedin.com/in/john-clifford-de-vera-511150159/"
-      color="#0E76A8"
-    />
-    <LinkIcon
-      IconProvider={AiOutlineGithub}
-      link="https://www.github.com/jayzyaj/"
-      color="#211F1F"
-    />
-    <LinkIcon
-      IconProvider={FaQuora}
-      link="https://www.quora.com/profile/Jayz-De-Vera/"
-      color="#A82400"
-    />
-  </div>
-);
 
 function About() {
   return (
@@ -63,8 +36,23 @@ function About() {
           <br />
           I work every day to create mobile native apps and client-side web apps.
           <br />
-          I love working with the consumer-facing side of a product or application which inspires me to give
-          the best user experience and serve data or information easily and efficiently.
+          I love working with the consumer-facing side of a product or application which inspires
+          me to give the best user experience and serve data or information easily and efficiently.
+          <br />
+          <br />
+          I love reading books. Wants to travel the world. A go-to guy on hiking.
+          Doing things that makes me uncomfortable.
+          <br />
+          <br />
+          I live in
+          {' '}
+          <b>Hong Kong</b>
+          . Working as a
+          {' '}
+          <b>Frontend Developer</b>
+          {' '}
+          for
+          <b><a style={{ color: colors.primary }} href="https://www.linkedin.com/company/circleyy/"> CircleYY</a></b>
           {/* Most of my work focuses on the
           consumer side of the product and my job is to give the user the best user experience. */}
         </Paragraph>

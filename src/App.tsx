@@ -49,7 +49,7 @@ function App() {
           </Menu.Item>
         </Menu>
       </Header>
-      <Content>
+      <Content style={{ height: '100%' }}>
         <Switch>
           <Route exact path="/portfolio">
             <Home />

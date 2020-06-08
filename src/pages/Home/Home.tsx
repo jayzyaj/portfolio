@@ -62,7 +62,7 @@ function Home() {
   let appLogoClass = '';
   if (animationFinish) appLogoClass = 'Home-logo';
   return (
-    <Content className="flex col-space-around">
+    <Content style={{ height: '100%' }} className="flex col-space-around">
       <div className={`flex home-logo ${appLogoClass}`}>
         <Lottie
           eventListeners={[
@@ -77,7 +77,7 @@ function Home() {
           width={340}
         />
       </div>
-      <div className="flex text-center flex-col margin-vertical-54">
+      <div className="text-wrapper flex text-center flex-col margin-vertical-54">
         <Title style={title}>
           I'm John Clifford de Vera
         </Title>

@@ -1,5 +1,5 @@
 .col-space-around {
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -16,9 +16,14 @@
   pointer-events: none;
 }
 
+.text-wrapper {
+  display: flex;
+  flex: 1;
+}
+
 .margin-vertical-54 {
-  margin-top: 54px;
-  margin-bottom: 54px;
+  /* margin-top: 54px;
+  margin-bottom: 54px; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
