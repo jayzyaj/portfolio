@@ -4,6 +4,7 @@ import '../../App.css';
 import './home.css';
 import Lottie from 'react-lottie';
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
+import { RiStackshareLine } from 'react-icons/ri';
 import { FaQuora } from 'react-icons/fa';
 import { Layout, Typography } from 'antd';
 // import { colors } from '../../constants/themes/colors';
@@ -46,6 +47,11 @@ const Footer = () => (
       IconProvider={AiOutlineGithub}
       link="https://www.github.com/jayzyaj/"
       color="#211F1F"
+    />
+    <LinkIcon
+      IconProvider={RiStackshareLine}
+      link="https://stackshare.io/jayzyaj/tech-stack"
+      color="#0690FA"
     />
     <LinkIcon
       IconProvider={FaQuora}

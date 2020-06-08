@@ -1,9 +1,22 @@
+.parentContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
 .mt-5 {
   margin-top: 5%;
 }
 
-.mt-2 {
-  margin-top: 2%;
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.icon {
+  font-size: 42px;
 }
 
 .image-profile {

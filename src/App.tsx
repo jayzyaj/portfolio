@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { Home } from './pages/Home/Home';
 import { About } from './pages/About/About';
+import { Works } from './pages/Works/Works';
 
 const { Content, Header } = Layout;
 
@@ -56,6 +57,9 @@ function App() {
           </Route>
           <Route path="/portfolio/about">
             <About />
+          </Route>
+          <Route path="/portfolio/works">
+            <Works />
           </Route>
         </Switch>
       </Content>
