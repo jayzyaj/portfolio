@@ -1,0 +1,26 @@
+.col-space-around {
+  /* justify-content: space-around; */
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.home-logo {
+  /* height: 40vmin; */
+  pointer-events: none;
+}
+
+.text-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.contact-wrapper {
+ max-height: 20%;
+}

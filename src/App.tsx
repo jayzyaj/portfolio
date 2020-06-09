@@ -10,6 +10,7 @@ import {
 import { Home } from './pages/Home/Home';
 import { About } from './pages/About/About';
 import { Works } from './pages/Works/Works';
+import { Contact } from './pages/Contact/Contact';
 
 const { Content, Header } = Layout;
 
@@ -60,6 +61,9 @@ function App() {
           </Route>
           <Route path="/portfolio/works">
             <Works />
+          </Route>
+          <Route path="/portfolio/contact">
+            <Contact />
           </Route>
         </Switch>
       </Content>
