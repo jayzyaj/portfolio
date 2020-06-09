@@ -9,6 +9,7 @@ import { Layout, Typography, Space } from 'antd';
 import works from '../../assets/animations/works.json';
 import nativeApp from '../../assets/animations/native-app.json';
 import website from '../../assets/animations/website.json';
+import microservices from '../../assets/animations/microservices.json';
 
 // const meImage = require('../../assets/images/me.JPG');
 
@@ -34,9 +35,18 @@ const nativeAppAnimationOptions = {
 };
 
 const websiteAnimationOptions = {
-  loop: true,
+  loop: false,
   autoplay: true,
   animationData: website,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const microservicesAnimationOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: microservices,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
@@ -103,7 +113,7 @@ function Works() {
           <div className="flex space-around col mt-2">
             <WorkRow title="Native Apps" animation={nativeAppAnimationOptions} caption="Let your consumers access your business or product anywhere around the globe in both iOS and Android platforms." />
             <WorkRow title="Frontend Web Apps" animation={websiteAnimationOptions} caption="Build a responsive web app of your business that delivers information efficiently in our naked eye." />
-            <WorkRow title="Microservices" animation={nativeAppAnimationOptions} caption="Build your services by breaking down your business/product specification into smaller pieces and connect them together." />
+            <WorkRow title="Microservices" animation={microservicesAnimationOptions} caption="Build your services by breaking down your business/product specification into smaller pieces and connect them together." />
           </div>
         </Space>
       </div>

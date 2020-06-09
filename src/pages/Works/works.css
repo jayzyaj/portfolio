@@ -10,6 +10,7 @@
 .flex-large {
   display: flex;
   flex: 10;
+  margin-left: 16px;
 }
 
 .row-container {
