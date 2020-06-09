@@ -34,7 +34,7 @@ function App() {
   const handleClick = (e: any) => setCurrent(e.key);
 
   return (
-    <Router basename="/">
+    <Router basename="/portfolio">
       <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
         <Menu style={navStyle.navWrapper} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
           <Menu.Item key="home">

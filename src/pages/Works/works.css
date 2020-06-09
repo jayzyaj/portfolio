@@ -13,6 +13,11 @@
   margin-left: 5%;
 }
 
+.mv-16 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 .row-container {
   display: flex;
   flex: 1;
