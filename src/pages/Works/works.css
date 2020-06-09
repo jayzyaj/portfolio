@@ -1,4 +1,4 @@
-.parentContainer {
+.parent-container {
   display: flex;
   justify-content: space-around;
 }
@@ -9,6 +9,10 @@
 
 .col {
   flex-direction: column;
+}
+
+.space-around {
+  justify-content: space-around;
 }
 
 .row {
@@ -29,12 +33,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
   /* max-width: 60%; */
 }
 
-.caption {
+.what-i-do-caption {
   text-align: left;
   font-size: 24px;
   font-family: 'OpenSans-Regular';
-  max-width: 60%;
+  max-width: 100%;
+}
+
+.caption-container {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

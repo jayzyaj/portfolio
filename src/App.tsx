@@ -43,7 +43,7 @@ function App() {
             <Link to="/portfolio/about">About</Link>
           </Menu.Item>
           <Menu.Item key="works">
-            <Link to="/portfolio/works">Works</Link>
+            <Link to="/portfolio/works">What I do</Link>
           </Menu.Item>
           <Menu.Item key="contact">
             <Link to="/portfolio/contact">Contact</Link>

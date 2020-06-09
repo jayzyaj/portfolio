@@ -34,7 +34,7 @@ function About() {
           My name is John Clifford de Vera and I'm a Frontend Engineer.
           <br />
           <br />
-          I work every day to create mobile native apps and client-side web apps.
+          I work every day to build and launch native apps on both iOS and Android platforms and web apps.
           <br />
           I love working with the consumer-facing side of a product or application which inspires
           me to give the best user experience and serve data or information easily and efficiently.
@@ -57,9 +57,9 @@ function About() {
           consumer side of the product and my job is to give the user the best user experience. */}
         </Paragraph>
       </div>
-      <div className="footer-wrapper">
-        {/* <Footer /> */}
-      </div>
+      {/* <div className="footer-wrapper">
+        <Footer />
+      </div> */}
     </Content>
   );
 }
