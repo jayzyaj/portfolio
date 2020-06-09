@@ -1,16 +1,27 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import Lottie from 'react-lottie';
 import '../../App.css';
 import './about.css';
 import { Layout, Typography } from 'antd';
 // import { colors } from '../../constants/themes/colors';
 import { colors } from '../../constants/themes/colors';
+import aboutMe from '../../assets/animations/me-in-park.json';
 
 // const meImage = require('../../assets/images/me.JPG');
 
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: aboutMe,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 
 const homeTitleStyle = {
   color: '#211F1F',
@@ -22,8 +33,13 @@ const homeTitleStyle = {
 function About() {
   return (
     <Content className="flex col-space-around">
-      <div className="flex home-logo mt-5">
-        {/* <img className="image-profile" src={meImage} alt="Profile" /> */}
+      <div className="flex no-touch">
+        <Lottie
+          options={defaultOptions}
+          style={{ backgroundColor: 'transparent' }}
+          height={340}
+          width={500}
+        />
       </div>
       <div className="flex flex-col text-wrapper">
         <Title style={homeTitleStyle}>
@@ -34,7 +50,8 @@ function About() {
           My name is John Clifford de Vera and I'm a Frontend Engineer.
           <br />
           <br />
-          I work every day to build and launch native apps on both iOS and Android platforms and web apps.
+          I work every day to build and launch native apps on
+          both iOS and Android platforms and web apps.
           <br />
           I love working with the consumer-facing side of a product or application which inspires
           me to give the best user experience and serve data or information easily and efficiently.

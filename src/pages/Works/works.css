@@ -7,16 +7,40 @@
   margin-top: 5%;
 }
 
+.flex-large {
+  display: flex;
+  flex: 10;
+}
+
+.row-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-width {
+  /* width: 20px !important; */
+  pointer-events: none;
+  max-width: 100vh !important;
+}
+
 .col {
   flex-direction: column;
 }
 
 .space-around {
   justify-content: space-around;
+  align-items: center;
 }
 
 .row {
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.no-touch {
+  /* height: 40vmin; */
+  pointer-events: none;
 }
 
 .icon {
@@ -41,10 +65,11 @@
   text-align: left;
   font-size: 24px;
   font-family: 'OpenSans-Regular';
-  max-width: 100%;
+  /* max-width: 80%; */
 }
 
 .caption-container {
   margin-top: 16px;
   margin-bottom: 16px;
+  align-items: center;
 }
