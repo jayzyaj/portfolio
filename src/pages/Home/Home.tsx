@@ -83,7 +83,7 @@ function Home() {
           width={340}
         />
       </div>
-      <div className="text-wrapper flex text-center flex-col margin-vertical-54">
+      <div className="text-wrapper flex text-center flex-col">
         <Title style={title}>
           I'm John Clifford de Vera
         </Title>

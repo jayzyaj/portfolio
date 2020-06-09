@@ -34,37 +34,29 @@ function App() {
   const handleClick = (e: any) => setCurrent(e.key);
 
   return (
-    <Router>
+    <Router basename="/">
       <Header className="siteLayoutBackground" style={{ padding: 0, backgroundColor: 'transparent' }}>
         <Menu style={navStyle.navWrapper} onClick={handleClick} selectedKeys={[current]} mode="horizontal">
           <Menu.Item key="home">
-            <Link to="/portfolio">Intro</Link>
+            <Link to="/">Intro</Link>
           </Menu.Item>
           <Menu.Item key="about">
-            <Link to="/portfolio/about">About</Link>
+            <Link to="/about">About</Link>
           </Menu.Item>
           <Menu.Item key="works">
-            <Link to="/portfolio/works">What I do</Link>
+            <Link to="/works">What I do</Link>
           </Menu.Item>
           <Menu.Item key="contact">
-            <Link to="/portfolio/contact">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </Menu.Item>
         </Menu>
       </Header>
       <Content style={{ height: '100%' }}>
         <Switch>
-          <Route exact path="/portfolio">
-            <Home />
-          </Route>
-          <Route path="/portfolio/about">
-            <About />
-          </Route>
-          <Route path="/portfolio/works">
-            <Works />
-          </Route>
-          <Route path="/portfolio/contact">
-            <Contact />
-          </Route>
+          <Route exact component={Home} path="/" />
+          <Route component={About} path="/about" />
+          <Route component={Works} path="/works" />
+          <Route component={Contact} path="/contact" />
         </Switch>
       </Content>
     </Router>

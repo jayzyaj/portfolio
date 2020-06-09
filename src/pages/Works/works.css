@@ -10,7 +10,7 @@
 .flex-large {
   display: flex;
   flex: 10;
-  margin-left: 16px;
+  margin-left: 5%;
 }
 
 .row-container {
@@ -37,6 +37,15 @@
 
 .row {
   flex-direction: row;
+}
+
+.row-container {
+  display: flex;
+  /* flex: 0; */
+  max-width: 70%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 
 .no-touch {

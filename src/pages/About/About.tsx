@@ -53,6 +53,7 @@ function About() {
           I work every day to build and launch native apps on
           both iOS and Android platforms and web apps.
           <br />
+          <br />
           I love working with the consumer-facing side of a product or application which inspires
           me to give the best user experience and serve data or information easily and efficiently.
           <br />

@@ -66,31 +66,50 @@ type RowProps = {
 };
 
 const WorkRow = ({ title, caption, animation }: RowProps) => (
-  <div className="caption-container">
-    <div className="flex row row-container">
-      <div className="flex animation-width">
-        <Lottie
-          options={animation}
-          style={{ backgroundColor: 'transparent' }}
-          // width={150}
-          // height={340}
-          // width={340}
-        />
-      </div>
-      <div className="flex-large col">
-        <Title level={2}>
-          {title}
-        </Title>
-        <Paragraph className="what-i-do-caption">
-          {caption}
-        </Paragraph>
-      </div>
+  // <div className="caption-container">
+  //   <div className="flex row row-container">
+  //     <div className="flex animation-width">
+  //       <Lottie
+  //         options={animation}
+  //         style={{ backgroundColor: 'transparent' }}
+  //         // width={150}
+  //         // height={340}
+  //         // width={340}
+  //       />
+  //     </div>
+  //     <div className="flex-large col">
+  //       <Title level={2}>
+  //         {title}
+  //       </Title>
+  //       <Paragraph className="what-i-do-caption">
+  //         {caption}
+  //       </Paragraph>
+  //     </div>
+  //   </div>
+  //   {/* <div className="flex">
+  //     <Paragraph className="what-i-do-caption">
+  //       {caption}
+  //     </Paragraph>
+  //   </div> */}
+  // </div>
+  <div className="row-container">
+    <div className="flex animation-width">
+      <Lottie
+        options={animation}
+        style={{ backgroundColor: 'transparent' }}
+        width={100}
+        height={100}
+        // width={340}
+      />
     </div>
-    {/* <div className="flex">
+    <div className="flex-large col">
+      <Title level={2}>
+        {title}
+      </Title>
       <Paragraph className="what-i-do-caption">
         {caption}
       </Paragraph>
-    </div> */}
+    </div>
   </div>
 );
 
@@ -106,16 +125,16 @@ function Works() {
         />
       </div>
       <div className="flex flex-col text-wrapper">
-        <Space className="flex flex-col">
+        {/* <Space className="flex flex-col"> */}
           <Title style={homeTitleStyle}>
             What I do
           </Title>
-          <div className="flex space-around col mt-2">
-            <WorkRow title="Native Apps" animation={nativeAppAnimationOptions} caption="Let your consumers access your business or product anywhere around the globe in both iOS and Android platforms." />
-            <WorkRow title="Frontend Web Apps" animation={websiteAnimationOptions} caption="Build a responsive web app of your business that delivers information efficiently in our naked eye." />
-            <WorkRow title="Microservices" animation={microservicesAnimationOptions} caption="Build your services by breaking down your business/product specification into smaller pieces and connect them together." />
-          </div>
-        </Space>
+          {/* <div className="flex space-around col mt-2"> */}
+          <WorkRow title="Native Apps" animation={nativeAppAnimationOptions} caption="Let your consumers access your business or product anywhere around the globe in both iOS and Android platforms." />
+          <WorkRow title="Frontend Web Apps" animation={websiteAnimationOptions} caption="Build a responsive web app of your business that delivers information efficiently in our naked eye." />
+          <WorkRow title="Microservices" animation={microservicesAnimationOptions} caption="Build your services by breaking down your business/product specification into smaller pieces and connect them together." />
+          {/* </div> */}
+        {/* </Space> */}
       </div>
     </Content>
   );
