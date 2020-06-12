@@ -11,6 +11,7 @@ import { Home } from './pages/Home/Home';
 import { About } from './pages/About/About';
 import { Works } from './pages/Works/Works';
 import { Contact } from './pages/Contact/Contact';
+import { NotFound } from './pages/404/404';
 
 const { Content, Header } = Layout;
 
@@ -57,6 +58,7 @@ function App() {
           <Route component={About} path="/about" />
           <Route component={Works} path="/works" />
           <Route component={Contact} path="/contact" />
+          <Route component={NotFound} />
         </Switch>
       </Content>
     </Router>
