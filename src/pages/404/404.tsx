@@ -1,15 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React from 'react';
 import '../../App.css';
 import './404.css';
 import Lottie from 'react-lottie';
-import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
-import { RiStackshareLine } from 'react-icons/ri';
-import { FaQuora } from 'react-icons/fa';
 import { Layout, Typography } from 'antd';
 // import { colors } from '../../constants/themes/colors';
 import notFoundAnimation from '../../assets/animations/404.json';
-import { LinkIcon } from '../../components/LinkIcon';
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -35,31 +31,6 @@ const subTitle = {
   fontFamily: 'OpenSans-Regular',
   marginTop: -20,
 };
-
-const Footer = () => (
-  <div className="footer">
-    <LinkIcon
-      IconProvider={AiOutlineLinkedin}
-      link="https://www.linkedin.com/in/john-clifford-de-vera-511150159/"
-      color="#0E76A8"
-    />
-    <LinkIcon
-      IconProvider={AiOutlineGithub}
-      link="https://www.github.com/jayzyaj/"
-      color="#211F1F"
-    />
-    <LinkIcon
-      IconProvider={RiStackshareLine}
-      link="https://stackshare.io/jayzyaj/tech-stack"
-      color="#0690FA"
-    />
-    <LinkIcon
-      IconProvider={FaQuora}
-      link="https://www.quora.com/profile/Jayz-De-Vera/"
-      color="#A82400"
-    />
-  </div>
-);
 
 function NotFound() {
   return (
