@@ -30,7 +30,7 @@ const nativeAppAnimationOptions = {
 };
 
 const websiteAnimationOptions = {
-  loop: false,
+  loop: true,
   autoplay: true,
   animationData: website,
   rendererSettings: {
@@ -98,7 +98,7 @@ function Works() {
           What I do
         </Title>
         <WorkRow title="Native Apps" animation={nativeAppAnimationOptions} caption="Let your consumers access your business or product anywhere around the globe in both iOS and Android platforms." />
-        <WorkRow title="Frontend Web Apps" animation={websiteAnimationOptions} caption="Build a responsive web app of your business that delivers information efficiently in our naked eye." />
+        <WorkRow title="Web Apps" animation={websiteAnimationOptions} caption="Build a responsive web app of your business that delivers information efficiently in our naked eye." />
         <WorkRow title="Microservices" animation={microservicesAnimationOptions} caption="Build your services by breaking down your business/product specification into smaller pieces and connect them together." />
       </div>
     </Content>
